@@ -1,0 +1,153 @@
+2025-08-03 21:26:33 INFO  [main] bank.Application - Starting Application using Java 23.0.2 with PID 57444 (/Users/uyenhoang/Documents/MIU/EA/lab/lab10/Lab10PartD/BankApplication/target/classes started by uyenhoang in /Users/uyenhoang/Documents/MIU/EA/lab/lab10/Lab10PartD/BankApplication)
+2025-08-03 21:26:33 DEBUG [main] bank.Application - Running with Spring Boot v3.5.0, Spring v6.2.7
+2025-08-03 21:26:33 INFO  [main] bank.Application - No active profile set, falling back to 1 default profile: "default"
+2025-08-03 21:26:35 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-03 21:26:35 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-08-03 21:26:35 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-08-03 21:26:37 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-08-03 21:26:38 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@55adcf9e
+2025-08-03 21:26:38 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-08-03 21:26:38 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-03 21:26:40 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-03 21:26:40 WARN  [main] o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table account drop foreign key FK6mett28ruhadcrimdr5illfuc" via JDBC [Table 'eadb.account' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table account drop foreign key FK6mett28ruhadcrimdr5illfuc" via JDBC [Table 'eadb.account' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:479)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:245)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:218)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:186)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:116)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at bank.Application.main(Application.java:28)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'eadb.account' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 38 common frames omitted
+2025-08-03 21:26:40 WARN  [main] o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table account_entry drop foreign key FKddxh5t1ceqph76t5b7a920ugs" via JDBC [Table 'eadb.account_entry' doesn't exist]
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table account_entry drop foreign key FKddxh5t1ceqph76t5b7a920ugs" via JDBC [Table 'eadb.account_entry' doesn't exist]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
+	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233)
+	at org.hibernate.tool.schema.internal.Helper.applySqlStrings(Helper.java:217)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:479)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropConstraintsTablesSequences(SchemaDropperImpl.java:245)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:218)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:186)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:116)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1430)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351)
+	at bank.Application.main(Application.java:28)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'eadb.account_entry' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
+	... 38 common frames omitted
+2025-08-03 21:26:41 INFO  [main] bank.Application - Started Application in 9.069 seconds (process running for 9.673)
+2025-08-03 21:26:41 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:41 DEBUG [main] bank.logging.Logger - createAccount with parameters accountNumber= 1263862 , customerName= Frank Brown
+2025-08-03 21:26:41 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:41 DEBUG [main] bank.logging.Logger - createAccount with parameters accountNumber= 4253892 , customerName= John Doe
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findById on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - deposit with parameters accountNumber= 1263862 , amount= 240.0
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findById on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [task-1] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy113
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - deposit with parameters accountNumber= 1263862 , amount= 529.0
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findById on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [task-2] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy113
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - withdrawEuros with parameters accountNumber= 1263862 , amount= 230.0
+2025-08-03 21:26:42 DEBUG [task-3] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy113
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findById on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - deposit with parameters accountNumber= 4253892 , amount= 12450.0
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - JMS Message: Deposit of $ 12450.0 to account with accountNumber= 4253892
+2025-08-03 21:26:42 DEBUG [task-4] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy113
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findById on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - depositEuros with parameters accountNumber= 4253892 , amount= 200.0
+2025-08-03 21:26:42 DEBUG [task-5] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy113
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findById on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findById on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy110
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - transferFunds with parameters fromAccountNumber= 4253892 , toAccountNumber= 1263862 , amount= 100.0 , description= payment of invoice 10232
+2025-08-03 21:26:42 DEBUG [task-6] bank.logging.Logger - Call was made to:save on class jdk.proxy2.$Proxy113
+2025-08-03 21:26:42 DEBUG [main] bank.logging.Logger - Call was made to:findAll on class jdk.proxy2.$Proxy110
+2025-08-03 21:27:42 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-08-03 21:27:42 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
