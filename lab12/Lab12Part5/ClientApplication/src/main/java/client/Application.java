@@ -34,7 +34,7 @@ public class Application implements CommandLineRunner {
 		String adminToken = client.signin("admin@admin.com", "password");
 		if (adminToken != null) {
 			client.callEndpoint("/api/all", adminToken);
-			client.callEndpoint("/api/users", adminToken); // usually accessible
+			client.callEndpoint("/api/users", adminToken);
 			client.callEndpoint("/api/admins", adminToken);
 		}
 
